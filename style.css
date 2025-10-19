@@ -1,0 +1,145 @@
+/* style.css - Purple & White, modern / creative, simple & elegant */
+:root{
+  --bg:#fbf8ff;
+  --card:#ffffff;
+  --purple-1:#6c4eff;
+  --purple-2:#8e6bff;
+  --accent:#b58cff;
+  --muted:#6b6b7a;
+  --glass: rgba(255,255,255,0.6);
+  --radius:14px;
+  --shadow: 0 10px 30px rgba(99,70,255,0.08);
+  --maxw:1100px;
+  font-family: "Inter", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg,var(--bg), #f3eefc);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.55;
+  font-size:16px;
+}
+
+/* Layout */
+.container{max-width:var(--maxw);margin:0 auto;padding:22px}
+
+/* NAV */
+.navbar{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 22px;
+  background:linear-gradient(90deg, rgba(108,78,255,0.08), rgba(142,107,255,0.04));
+  backdrop-filter: blur(6px);
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  margin:18px;
+}
+.brand{
+  display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;
+}
+.brand .logo{
+  width:84px;height:84px;border-radius:18px;
+  background:linear-gradient(135deg,var(--purple-1),var(--purple-2));
+  display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:28px;
+  box-shadow: 0 8px 22px rgba(110,80,255,0.12);
+}
+.brand .text{display:flex;flex-direction:column}
+.brand .title{font-size:18px;font-weight:700}
+.brand .subtitle{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* nav links */
+.nav-links{display:flex;gap:10px;align-items:center}
+.nav-links a{
+  text-decoration:none;padding:8px 12px;border-radius:10px;color:var(--muted);font-weight:600;
+}
+.nav-links a.cta{
+  background:linear-gradient(90deg,var(--purple-2),var(--accent));
+  color:white;
+  box-shadow: 0 6px 18px rgba(139,94,255,0.12);
+}
+.nav-links a:hover{transform:translateY(-3px);transition:all .18s ease}
+
+/* HERO */
+.hero{
+  margin:28px;position:relative;border-radius:16px;overflow:hidden;
+  display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:center;
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45));
+  padding:30px;box-shadow:var(--shadow);
+}
+.hero-left h1{
+  margin:0;font-size:36px;color:var(--purple-1);letter-spacing:-0.5px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+.hero-left p{color:var(--muted);margin-top:10px;max-width:560px}
+.hero-left .cta{margin-top:18px;display:inline-block;padding:12px 20px;border-radius:12px;
+  background:linear-gradient(90deg,var(--purple-2),var(--accent));color:white;text-decoration:none;font-weight:700}
+
+/* right card with logos */
+.hero-right{
+  background:linear-gradient(180deg, rgba(108,78,255,0.04), rgba(142,107,255,0.02));
+  border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;
+}
+.logo-row{display:flex;gap:14px;align-items:center;justify-content:center}
+.app-logo{
+  width:86px;height:86px;border-radius:18px;display:flex;align-items:center;justify-content:center;
+  box-shadow: 0 10px 18px rgba(99,70,255,0.08);
+  transition:transform .35s cubic-bezier(.2,.9,.3,1), box-shadow .35s;
+  background:white;
+}
+.app-logo img{width:58px;height:58px;display:block}
+.app-logo:hover{transform:translateY(-8px) rotate(-3deg);box-shadow:0 20px 40px rgba(99,70,255,0.12)}
+
+/* subtle animated floating shapes */
+.float-shape{
+  position:absolute;border-radius:50%;opacity:.12;mix-blend-mode:screen;filter:blur(24px);
+}
+.shape1{width:200px;height:200px;background:linear-gradient(90deg,#b58cff,#8e6bff);top:-40px;left:-40px}
+.shape2{width:160px;height:160px;background:linear-gradient(90deg,#cda6ff, #6c4eff);bottom:-60px;right:-40px}
+
+/* Sections */
+.section{margin:30px;border-radius:12px;padding:18px;background:var(--card);box-shadow:var(--shadow)}
+.short{max-width:900px;color:var(--muted)}
+
+/* SMALL CARDS */
+.card-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:14px}
+.small-card{padding:14px;border-radius:12px;background:linear-gradient(180deg, white, #fbf8ff);box-shadow:0 6px 16px rgba(100,70,220,0.04)}
+.small-card h4{margin:6px 0 6px;color:var(--purple-1)}
+.small-card p{margin:0;color:var(--muted);font-size:14px}
+
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gallery-item{position:relative;overflow:hidden;border-radius:12px}
+.gallery-item img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .6s ease}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-caption{position:absolute;left:12px;bottom:12px;background:linear-gradient(90deg, rgba(108,78,255,0.9), rgba(142,107,255,0.9));
+  color:white;padding:8px 12px;border-radius:10px;font-weight:600;font-size:14px}
+
+/* TEAM */
+.team-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.member{width:220px;background:linear-gradient(180deg,#fff, #fcfbff);border-radius:12px;padding:14px;text-align:center;box-shadow:0 12px 30px rgba(110,80,255,0.06)}
+.member img{width:120px;height:120px;border-radius:16px;object-fit:cover;margin:0 auto;display:block;box-shadow:0 8px 18px rgba(99,70,255,0.06)}
+.member h3{margin:12px 0 6px;color:var(--purple-1)}
+.member p{margin:0;color:var(--muted);font-size:14px}
+
+/* FORM (contact) */
+.form-grid{max-width:760px;margin:0 auto;display:grid;gap:12px}
+.input, textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #eee;background:linear-gradient(180deg,#fff,#fbfbff);font-size:15px;color:#222}
+.btn-primary{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,var(--purple-2),var(--accent));color:white;text-decoration:none;border:none;cursor:pointer}
+
+/* FOOTER */
+.footer{margin:28px;text-align:center;color:var(--muted);font-size:14px;padding:18px}
+
+/* tiny animations */
+@keyframes floaty { 0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.app-logo { animation: floaty 4.5s ease-in-out infinite; }
+
+/* responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr; padding:20px}
+  .hero-right{order:-1}
+  .brand .logo{width:64px;height:64px;font-size:22px}
+  .hero-left h1{font-size:28px}
+}
